@@ -14,8 +14,8 @@ ssh_options[:forward_agent] = true
 set :ssh_options, {:forward_agent => true, keys: ['~/.vagrant.d/insecure_private_key']}
  
 # SCM info
-set :repository,  "file:///Users/ahdidou/Documents/ProjectsMobiblanc/ContinuousDeployement/SYMFONY/Symfony2/Symfony"
-set :deploy_via,  :copy
+set :repository,  "https://github.com/black1987/Symfony2CDeployement"
+set :deploy_via,  :remote_cache
 set :scm,         :git
  
 set :model_manager, "doctrine"
