@@ -50,6 +50,11 @@ end
 
 after "deploy:setup", "upload_parameters"
 
+after "deploy:finalize_update" do
+  run "sudo chown -R www-data:www-data #{latest_release}/#{cache_path}"
+  run "sudo chown -R www-data:www-data #{latest_release}/#{log_path}"
+  run "sudo chmod -R 777 #{latest_release}/#{cache_path}"
+end
  
 # The following line tells Capifony to deploy the last Git tag.
 # Since Jenkins creates and pushes a tag following a successful build this should always be the last tested version of the code.
