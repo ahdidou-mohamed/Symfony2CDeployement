@@ -6,7 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class DefaultController extends Controller
 {
-    public function indexAction($name)
+    public function indexAction($name, $second)
     {
         return $this->render('BloggerBlogBundle:Default:index.html.twig', array('name' => $name, 'second'=>$second));
     }
