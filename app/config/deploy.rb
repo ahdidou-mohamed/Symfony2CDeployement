@@ -11,7 +11,7 @@ default_run_options[:pty] = true
 set :user, "vagrant"
 set :use_sudo, false
 ssh_options[:forward_agent] = true
-set :ssh_options, {:forward_agent => true, keys: ['~/.vagrant.d/insecure_private_key']}
+set :ssh_options, {:forward_agent => true, keys: ['/Users/ahdidou/.vagrant.d/insecure_private_key']}
  
 # SCM info
 set :repository,  "https://github.com/black1987/Symfony2CDeployement"
